@@ -1,0 +1,85 @@
+2025-03-04 13:19:13,818 - INFO - DataAnalyzer initialisé avec le fichier : data.csv
+2025-03-04 13:19:13,830 - INFO - Données chargées avec succès depuis data.csv : 891 lignes
+2025-03-04 13:19:13,846 - INFO - Validation des données réussie
+2025-03-04 13:19:13,846 - INFO - La fonction load_data a été exécutée en 0.0278 secondes
+2025-03-04 13:19:13,851 - INFO - 179 lignes avec des valeurs manquantes supprimées dans les colonnes critiques
+2025-03-04 13:19:13,853 - INFO - Bornes des outliers pour age : inférieure=-7.00, supérieure=65.00
+2025-03-04 13:19:13,854 - INFO - 8 outliers trouvés dans la colonne age
+2025-03-04 13:19:13,858 - INFO - Bornes des outliers pour fare : inférieure=-28.81, supérieure=69.49
+2025-03-04 13:19:13,859 - INFO - 94 outliers trouvés dans la colonne fare
+2025-03-04 13:19:13,860 - INFO - 102 lignes avec des outliers supprimées
+2025-03-04 13:19:13,865 - INFO - Validation des données nettoyées réussie
+2025-03-04 13:19:13,866 - INFO - La fonction clean_data a été exécutée en 0.0183 secondes
+2025-03-04 13:19:13,872 - INFO - Statistiques calculées avec succès
+2025-03-04 13:19:13,872 - INFO - Statistique : survival_rate = 35.90
+2025-03-04 13:19:13,872 - INFO - Statistique : mean_age = 28.427459716796875
+2025-03-04 13:19:13,872 - INFO - Statistique : median_fare = 13.0
+2025-03-04 13:19:13,872 - INFO - Statistique : passengers_count = 610.00
+2025-03-04 13:19:13,872 - INFO - Statistique : male_count = 407.00
+2025-03-04 13:19:13,872 - INFO - Statistique : female_count = 203.00
+2025-03-04 13:19:13,872 - INFO - Statistique : male_survival_rate = 19.16
+2025-03-04 13:19:13,873 - INFO - Statistique : female_survival_rate = 69.46
+2025-03-04 13:19:13,873 - INFO - Statistique : class_1_count = 91.00
+2025-03-04 13:19:13,873 - INFO - Statistique : class_1_survival_rate = 56.04
+2025-03-04 13:19:13,873 - INFO - Statistique : class_2_count = 166.00
+2025-03-04 13:19:13,873 - INFO - Statistique : class_2_survival_rate = 50.00
+2025-03-04 13:19:13,873 - INFO - Statistique : class_3_count = 353.00
+2025-03-04 13:19:13,873 - INFO - Statistique : class_3_survival_rate = 24.08
+2025-03-04 13:19:13,873 - INFO - La fonction compute_statistics a été exécutée en 0.0062 secondes
+2025-03-04 13:19:14,023 - INFO - Heatmap de corrélation enregistrée sous .//correlation_heatmap.png
+2025-03-04 13:19:14,033 - INFO - Graphique de survie par classe enregistré sous .//survival_by_class.png
+2025-03-04 13:19:14,479 - INFO - Toutes les visualisations enregistrées sous .//all_visualizations.png
+2025-03-04 13:53:23,492 - INFO - DataAnalyzer initialisé avec le fichier : data.csv
+2025-03-04 13:53:23,514 - INFO - Données chargées avec succès depuis data.csv : 891 lignes
+2025-03-04 13:53:23,520 - ERROR - Erreurs de validation des valeurs : ["Valeurs invalides dans la colonne 'sex' : ['gogo']"]
+2025-03-04 13:53:23,538 - ERROR - Erreur lors du chargement ou de la validation des données : 1 validation error for DataValidateModel
+  Value error, Valeurs invalides dans la colonne 'sex' : ['gogo'] [type=value_error, input_value={'df':      survived  pcl...[891 rows x 15 columns]}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/value_error
+2025-03-04 13:53:23,544 - ERROR - Erreur lors de l'exécution principale : 1 validation error for DataValidateModel
+  Value error, Valeurs invalides dans la colonne 'sex' : ['gogo'] [type=value_error, input_value={'df':      survived  pcl...[891 rows x 15 columns]}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/value_error
+Traceback (most recent call last):
+  File "C:\Users\DELL\AppData\Local\Temp\ipykernel_4984\1797698557.py", line 11, in main
+    raw_data = analyzer.load_data()
+               ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Temp\ipykernel_4984\1157253354.py", line 16, in wrapper
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Temp\ipykernel_4984\4171825917.py", line 33, in load_data
+    DataValidateModel(df=self.raw_data)
+  File "C:\Users\DELL\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\pydantic\main.py", line 164, in __init__
+    __pydantic_self__.__pydantic_validator__.validate_python(data, self_instance=__pydantic_self__)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for DataValidateModel
+  Value error, Valeurs invalides dans la colonne 'sex' : ['gogo'] [type=value_error, input_value={'df':      survived  pcl...[891 rows x 15 columns]}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.4/v/value_error
+2025-03-04 14:27:54,074 - INFO - DataAnalyzer initialisé avec le fichier : data.csv
+2025-03-04 14:27:54,091 - INFO - Données chargées avec succès depuis data.csv : 891 lignes
+2025-03-04 14:27:54,106 - INFO - Validation des données réussie
+2025-03-04 14:27:54,106 - INFO - La fonction load_data a été exécutée en 0.0308 secondes
+2025-03-04 14:27:54,110 - INFO - 179 lignes avec des valeurs manquantes supprimées dans les colonnes critiques
+2025-03-04 14:27:54,113 - INFO - Bornes des outliers pour age : inférieure=-7.00, supérieure=65.00
+2025-03-04 14:27:54,114 - INFO - 8 outliers trouvés dans la colonne age
+2025-03-04 14:27:54,117 - INFO - Bornes des outliers pour fare : inférieure=-28.81, supérieure=69.49
+2025-03-04 14:27:54,119 - INFO - 94 outliers trouvés dans la colonne fare
+2025-03-04 14:27:54,122 - INFO - 102 lignes avec des outliers supprimées
+2025-03-04 14:27:54,127 - INFO - Validation des données nettoyées réussie
+2025-03-04 14:27:54,127 - INFO - La fonction clean_data a été exécutée en 0.0200 secondes
+2025-03-04 14:27:54,140 - INFO - Statistiques calculées avec succès
+2025-03-04 14:27:54,141 - INFO - Statistique : survival_rate = 35.90
+2025-03-04 14:27:54,141 - INFO - Statistique : mean_age = 28.427459716796875
+2025-03-04 14:27:54,141 - INFO - Statistique : median_fare = 13.0
+2025-03-04 14:27:54,141 - INFO - Statistique : passengers_count = 610.00
+2025-03-04 14:27:54,141 - INFO - Statistique : male_count = 407.00
+2025-03-04 14:27:54,141 - INFO - Statistique : female_count = 203.00
+2025-03-04 14:27:54,141 - INFO - Statistique : male_survival_rate = 19.16
+2025-03-04 14:27:54,141 - INFO - Statistique : female_survival_rate = 69.46
+2025-03-04 14:27:54,141 - INFO - Statistique : class_1_count = 91.00
+2025-03-04 14:27:54,141 - INFO - Statistique : class_1_survival_rate = 56.04
+2025-03-04 14:27:54,142 - INFO - Statistique : class_2_count = 166.00
+2025-03-04 14:27:54,142 - INFO - Statistique : class_2_survival_rate = 50.00
+2025-03-04 14:27:54,142 - INFO - Statistique : class_3_count = 353.00
+2025-03-04 14:27:54,142 - INFO - Statistique : class_3_survival_rate = 24.08
+2025-03-04 14:27:54,142 - INFO - La fonction compute_statistics a été exécutée en 0.0154 secondes
+2025-03-04 14:27:54,508 - INFO - Heatmap de corrélation enregistrée sous .//correlation_heatmap.png
+2025-03-04 14:27:54,546 - INFO - Graphique de survie par classe enregistré sous .//survival_by_class.png
+2025-03-04 14:27:55,456 - INFO - Toutes les visualisations enregistrées sous .//all_visualizations.png

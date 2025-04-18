@@ -1,0 +1,35 @@
+disable_existing_loggers: false
+formatters:
+  detailed:
+    format: '%(asctime)s - %(name)s - %(levelname)s - %(filename)s:%(lineno)d - %(message)s'
+  standard:
+    format: '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+handlers:
+  console:
+    class: logging.StreamHandler
+    formatter: standard
+    level: INFO
+    stream: ext://sys.stdout
+  error_file:
+    backupCount: 5
+    class: logging.handlers.RotatingFileHandler
+    filename: error.log
+    formatter: detailed
+    level: ERROR
+    maxBytes: 10485760
+  file:
+    backupCount: 5
+    class: logging.handlers.RotatingFileHandler
+    filename: password_manager.log
+    formatter: detailed
+    level: DEBUG
+    maxBytes: 10485760
+loggers:
+  ? ''
+  : handlers:
+    - console
+    - file
+    - error_file
+    level: DEBUG
+    propagate: true
+version: 1
